@@ -7,7 +7,7 @@ import random
 
 def main():
 
-    word_set = load_word_set("data/wordle_words.txt")
+    word_set = load_word_set("data/word.txt")
     secret = random.choice(list(word_set))
     wordle = Wordle(secret)
 
@@ -22,13 +22,7 @@ def main():
             )
             continue
 
-        if not x in word_set:
-            print(
-                Fore.RED
-                + f"{x} is not a valid word!"
-                + Fore.RESET
-            )
-            continue
+
 
         wordle.attempt(x)
         display_results(wordle)
