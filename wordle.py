@@ -28,6 +28,7 @@ class Wordle:
         # First, check for GREEN letters.
         for i in range(self.WORD_LENGTH):
             letter = result[i]
+
             if letter.character == remaining_secret[i]:
                 letter.is_in_position = True
                 remaining_secret[i] = self.VOIDED_LETTER
